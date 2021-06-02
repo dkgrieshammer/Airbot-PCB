@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name Airbot)(type Legacy)(uri ${KIPRJMOD}/Airbot.lib)(options "")(descr ""))
+  (lib (name AirBot-rescue)(type Legacy)(uri ${KIPRJMOD}/AirBot-rescue.lib)(options "")(descr ""))
+)

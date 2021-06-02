@@ -1,0 +1,613 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Airbot"
+Date "2021-05-10"
+Rev "v.01"
+Comp "Universal Interaction"
+Comment1 ""
+Comment2 "creativecommons.org/licenses/by/4.0/"
+Comment3 "License: CC BY 4.0"
+Comment4 "Author: David Grieshammer"
+$EndDescr
+$Comp
+L Airbot:Huzzah32 U1
+U 1 1 609A9FA3
+P 1710 2770
+F 0 "U1" H 1710 1427 50  0000 C CNN
+F 1 "Huzzah32" H 1710 1336 50  0000 C CNN
+F 2 "AirBot:Huzzah32" H 1875 4015 50  0001 C CNN
+F 3 "" H 1875 4015 50  0001 C CNN
+	1    1710 2770
+	1    0    0    -1  
+$EndComp
+$Comp
+L Motor:Motor_Servo M3
+U 1 1 609B0434
+P 10040 3920
+F 0 "M3" H 10372 3985 50  0000 L CNN
+F 1 "Motor_Servo" H 10372 3894 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 10040 3730 50  0001 C CNN
+F 3 "http://forums.parallax.com/uploads/attachments/46831/74481.png" H 10040 3730 50  0001 C CNN
+	1    10040 3920
+	1    0    0    -1  
+$EndComp
+$Comp
+L Airbot:SRF02 U3
+U 1 1 609BA79A
+P 7040 3460
+F 0 "U3" H 7468 3506 50  0000 L CNN
+F 1 "SRF02" H 7468 3415 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 7040 3460 50  0001 C CNN
+F 3 "" H 7040 3460 50  0001 C CNN
+	1    7040 3460
+	1    0    0    -1  
+$EndComp
+$Comp
+L Airbot:SRF02 U2
+U 1 1 609BE965
+P 7040 1720
+F 0 "U2" H 7468 1766 50  0000 L CNN
+F 1 "SRF02" H 7468 1675 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 7040 1120 50  0001 C CNN
+F 3 "" H 7040 1120 50  0001 C CNN
+	1    7040 1720
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 609FDF6D
+P 1080 2140
+F 0 "#PWR02" H 1080 1890 50  0001 C CNN
+F 1 "GND" V 1085 2012 50  0000 R CNN
+F 2 "" H 1080 2140 50  0001 C CNN
+F 3 "" H 1080 2140 50  0001 C CNN
+	1    1080 2140
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR011
+U 1 1 60A02017
+P 9520 4020
+F 0 "#PWR011" H 9520 3770 50  0001 C CNN
+F 1 "GND" H 9525 3847 50  0000 C CNN
+F 2 "" H 9520 4020 50  0001 C CNN
+F 3 "" H 9520 4020 50  0001 C CNN
+	1    9520 4020
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 60A02BE2
+P 6390 2020
+F 0 "#PWR05" H 6390 1770 50  0001 C CNN
+F 1 "GND" V 6395 1892 50  0000 R CNN
+F 2 "" H 6390 2020 50  0001 C CNN
+F 3 "" H 6390 2020 50  0001 C CNN
+	1    6390 2020
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 60A0393D
+P 6390 3760
+F 0 "#PWR06" H 6390 3510 50  0001 C CNN
+F 1 "GND" V 6395 3632 50  0000 R CNN
+F 2 "" H 6390 3760 50  0001 C CNN
+F 3 "" H 6390 3760 50  0001 C CNN
+	1    6390 3760
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6540 3760 6390 3760
+Wire Wire Line
+	6540 2020 6390 2020
+$Comp
+L Device:Q_NPN_BCE Q1
+U 1 1 609EA98F
+P 9100 2520
+F 0 "Q1" V 9428 2520 50  0000 C CNN
+F 1 "NPN_MMBT8050" V 9337 2520 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 9300 2620 50  0001 C CNN
+F 3 "~" H 9100 2520 50  0001 C CNN
+	1    9100 2520
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Motor:Motor_DC M1
+U 1 1 609B3773
+P 8900 1650
+F 0 "M1" H 9058 1646 50  0000 L CNN
+F 1 "Motor_DC_left" H 9058 1555 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 8900 1560 50  0001 C CNN
+F 3 "~" H 8900 1560 50  0001 C CNN
+	1    8900 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8900 1450 8900 1390
+Wire Wire Line
+	8900 1950 8900 2010
+Wire Wire Line
+	8580 1390 8900 1390
+Connection ~ 8900 1390
+Wire Wire Line
+	8580 2010 8900 2010
+Wire Wire Line
+	8900 2010 8900 2420
+Text Label 3160 3810 0    50   ~ 0
+SCL
+Text Label 3160 3960 0    50   ~ 0
+SDA
+Text Label 6260 1570 2    50   ~ 0
+SDA
+Text Label 6300 3310 2    50   ~ 0
+SDA
+Text Label 6300 3460 2    50   ~ 0
+SCL
+Text Label 6260 1720 2    50   ~ 0
+SCL
+Wire Wire Line
+	6260 1570 6540 1570
+Wire Wire Line
+	6260 1720 6540 1720
+Wire Wire Line
+	6300 3310 6540 3310
+Wire Wire Line
+	6540 3460 6300 3460
+$Comp
+L power:+BATT #PWR010
+U 1 1 60A28665
+P 9520 3920
+F 0 "#PWR010" H 9520 3770 50  0001 C CNN
+F 1 "+BATT" V 9535 4047 50  0000 L CNN
+F 2 "" H 9520 3920 50  0001 C CNN
+F 3 "" H 9520 3920 50  0001 C CNN
+	1    9520 3920
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8900 1180 8900 1390
+Wire Wire Line
+	6360 1420 6450 1420
+$Comp
+L Device:CP1 C1
+U 1 1 60A2F862
+P 960 1300
+F 0 "C1" H 845 1254 50  0000 R CNN
+F 1 "100uF" H 845 1345 50  0000 R CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 960 1300 50  0001 C CNN
+F 3 "~" H 960 1300 50  0001 C CNN
+	1    960  1300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6450 1290 6450 1420
+Connection ~ 6450 1420
+Wire Wire Line
+	6450 1420 6540 1420
+$Comp
+L power:GND #PWR01
+U 1 1 60A40397
+P 960 1150
+F 0 "#PWR01" H 960 900 50  0001 C CNN
+F 1 "GND" V 965 1022 50  0000 R CNN
+F 2 "" H 960 1150 50  0001 C CNN
+F 3 "" H 960 1150 50  0001 C CNN
+	1    960  1150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9520 4020 9740 4020
+Text Label 9100 2820 3    50   ~ 0
+Motor_left
+$Comp
+L power:GND #PWR09
+U 1 1 609FF811
+P 9350 2420
+F 0 "#PWR09" H 9350 2170 50  0001 C CNN
+F 1 "GND" H 9355 2247 50  0000 C CNN
+F 2 "" H 9350 2420 50  0001 C CNN
+F 3 "" H 9350 2420 50  0001 C CNN
+	1    9350 2420
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9300 2420 9350 2420
+$Comp
+L Device:Q_NPN_BCE Q2
+U 1 1 60A5A71D
+P 10200 2510
+F 0 "Q2" V 10528 2510 50  0000 C CNN
+F 1 "NPN_MMBT8050" V 10437 2510 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 10400 2610 50  0001 C CNN
+F 3 "~" H 10200 2510 50  0001 C CNN
+	1    10200 2510
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Motor:Motor_DC M2
+U 1 1 60A5A727
+P 10000 1640
+F 0 "M2" H 10158 1636 50  0000 L CNN
+F 1 "Motor_DC_right" H 10158 1545 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 10000 1550 50  0001 C CNN
+F 3 "~" H 10000 1550 50  0001 C CNN
+	1    10000 1640
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10000 1440 10000 1380
+Wire Wire Line
+	10000 1940 10000 2000
+$Comp
+L Device:D D3
+U 1 1 60A5A734
+P 9680 1700
+F 0 "D3" V 9634 1780 50  0000 L CNN
+F 1 "S1BBTR" V 9725 1780 50  0000 L CNN
+F 2 "Diode_SMD:D_SMB" H 9680 1700 50  0001 C CNN
+F 3 "https://www.digikey.de/htmldatasheets/production/1914640/0/0/1/s1ab-s1mb.html" H 9680 1700 50  0001 C CNN
+	1    9680 1700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9680 1550 9680 1380
+Wire Wire Line
+	9680 1380 10000 1380
+Connection ~ 10000 1380
+Wire Wire Line
+	9680 1850 9680 2000
+Wire Wire Line
+	9680 2000 10000 2000
+Connection ~ 10000 2000
+Wire Wire Line
+	10000 2000 10000 2410
+$Comp
+L power:+BATT #PWR012
+U 1 1 60A5A745
+P 10000 1170
+F 0 "#PWR012" H 10000 1020 50  0001 C CNN
+F 1 "+BATT" H 10015 1343 50  0000 C CNN
+F 2 "" H 10000 1170 50  0001 C CNN
+F 3 "" H 10000 1170 50  0001 C CNN
+	1    10000 1170
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10000 1170 10000 1380
+$Comp
+L power:GND #PWR014
+U 1 1 60A5A750
+P 10450 2410
+F 0 "#PWR014" H 10450 2160 50  0001 C CNN
+F 1 "GND" H 10455 2237 50  0000 C CNN
+F 2 "" H 10450 2410 50  0001 C CNN
+F 3 "" H 10450 2410 50  0001 C CNN
+	1    10450 2410
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10400 2410 10450 2410
+Text Label 10200 2810 3    50   ~ 0
+Motor_right
+Wire Wire Line
+	10200 2810 10200 2710
+Wire Wire Line
+	9100 2820 9100 2720
+Wire Wire Line
+	8580 1860 8580 2010
+Wire Wire Line
+	8580 1560 8580 1390
+$Comp
+L Device:D D2
+U 1 1 60A14BD2
+P 8580 1710
+F 0 "D2" V 8534 1790 50  0000 L CNN
+F 1 "S1BBTR" V 8625 1790 50  0000 L CNN
+F 2 "Diode_SMD:D_SMB" H 8580 1710 50  0001 C CNN
+F 3 "https://www.digikey.de/htmldatasheets/production/1914640/0/0/1/s1ab-s1mb.html" H 8580 1710 50  0001 C CNN
+	1    8580 1710
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9520 3920 9740 3920
+$Comp
+L power:+BATT #PWR03
+U 1 1 60A77025
+P 2800 2310
+F 0 "#PWR03" H 2800 2160 50  0001 C CNN
+F 1 "+BATT" V 2815 2438 50  0000 L CNN
+F 2 "" H 2800 2310 50  0001 C CNN
+F 3 "" H 2800 2310 50  0001 C CNN
+	1    2800 2310
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2670 2310 2800 2310
+Text Label 9570 3650 1    50   ~ 0
+Servo
+Wire Wire Line
+	9570 3650 9570 3820
+Wire Wire Line
+	9570 3820 9740 3820
+Text Label 2840 3660 0    50   ~ 0
+Servo
+Text Label 2890 3360 0    50   ~ 0
+Motor_left
+Text Label 2890 3510 0    50   ~ 0
+Motor_right
+Wire Wire Line
+	2670 3510 2890 3510
+Wire Wire Line
+	1210 2140 1080 2140
+Wire Wire Line
+	2670 3360 2890 3360
+Wire Wire Line
+	2670 3810 2950 3810
+$Comp
+L Device:R R4
+U 1 1 60AAA80F
+P 3290 2660
+F 0 "R4" V 3210 2610 50  0000 L CNN
+F 1 "100" V 3360 2615 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3220 2660 50  0001 C CNN
+F 3 "~" H 3290 2660 50  0001 C CNN
+	1    3290 2660
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 60AACE8D
+P 4220 2860
+F 0 "#PWR04" H 4220 2610 50  0001 C CNN
+F 1 "GND" V 4225 2732 50  0000 R CNN
+F 2 "" H 4220 2860 50  0001 C CNN
+F 3 "" H 4220 2860 50  0001 C CNN
+	1    4220 2860
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2670 3960 2770 3960
+Connection ~ 2770 3960
+Wire Wire Line
+	2770 3960 3160 3960
+Wire Wire Line
+	2950 3810 2950 4360
+Wire Wire Line
+	2950 4360 3000 4360
+Connection ~ 2950 3810
+Wire Wire Line
+	2950 3810 3160 3810
+$Comp
+L power:+BATT #PWR08
+U 1 1 60ACB1A3
+P 8900 1180
+F 0 "#PWR08" H 8900 1030 50  0001 C CNN
+F 1 "+BATT" H 8915 1353 50  0000 C CNN
+F 2 "" H 8900 1180 50  0001 C CNN
+F 3 "" H 8900 1180 50  0001 C CNN
+	1    8900 1180
+	1    0    0    -1  
+$EndComp
+Text Label 830  1840 2    50   ~ 0
+3,3V
+Wire Wire Line
+	830  1840 960  1840
+$Comp
+L Device:R R1
+U 1 1 60AD24D5
+P 3150 4360
+F 0 "R1" V 3357 4360 50  0000 C CNN
+F 1 "10k" V 3266 4360 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3080 4360 50  0001 C CNN
+F 3 "~" H 3150 4360 50  0001 C CNN
+	1    3150 4360
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3300 4360 3450 4360
+$Comp
+L Device:R R2
+U 1 1 60AD7D3B
+P 3150 4700
+F 0 "R2" V 3357 4700 50  0000 C CNN
+F 1 "10k" V 3266 4700 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3080 4700 50  0001 C CNN
+F 3 "~" H 3150 4700 50  0001 C CNN
+	1    3150 4700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Jumper:Jumper_2_Bridged JP1
+U 1 1 60AE49B1
+P 3650 4360
+F 0 "JP1" H 3650 4555 50  0000 C CNN
+F 1 "Jumper_2_Bridged" H 3650 4464 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm" H 3650 4360 50  0001 C CNN
+F 3 "~" H 3650 4360 50  0001 C CNN
+	1    3650 4360
+	1    0    0    -1  
+$EndComp
+Text Label 3970 4360 0    50   ~ 0
+3,3V
+Wire Wire Line
+	3970 4360 3850 4360
+Wire Wire Line
+	2770 4700 3000 4700
+Wire Wire Line
+	2770 3960 2770 4700
+$Comp
+L Jumper:Jumper_2_Bridged JP2
+U 1 1 60AF2365
+P 3650 4700
+F 0 "JP2" H 3650 4895 50  0000 C CNN
+F 1 "Jumper_2_Bridged" H 3650 4804 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm" H 3650 4700 50  0001 C CNN
+F 3 "~" H 3650 4700 50  0001 C CNN
+	1    3650 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 4700 3450 4700
+Text Label 3980 4700 0    50   ~ 0
+3,3V
+Wire Wire Line
+	3850 4700 3980 4700
+Connection ~ 8900 2010
+$Comp
+L Device:Speaker LS1
+U 1 1 60B40F53
+P 10490 5400
+F 0 "LS1" H 10660 5396 50  0000 L CNN
+F 1 "Speaker" H 10660 5305 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 10490 5200 50  0001 C CNN
+F 3 "~" H 10480 5350 50  0001 C CNN
+	1    10490 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR013
+U 1 1 60B41A0C
+P 10070 5500
+F 0 "#PWR013" H 10070 5250 50  0001 C CNN
+F 1 "GND" V 10075 5372 50  0000 R CNN
+F 2 "" H 10070 5500 50  0001 C CNN
+F 3 "" H 10070 5500 50  0001 C CNN
+	1    10070 5500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10070 5500 10290 5500
+Text Label 1070 3940 2    50   ~ 0
+speaker
+Wire Wire Line
+	1070 3940 1210 3940
+Text Label 10090 5400 2    50   ~ 0
+speaker
+Wire Wire Line
+	10090 5400 10290 5400
+Wire Wire Line
+	4020 2860 4210 2860
+Wire Wire Line
+	4020 2660 4210 2660
+Wire Wire Line
+	4210 2660 4210 2860
+Connection ~ 4210 2860
+Wire Wire Line
+	4210 2860 4220 2860
+Wire Wire Line
+	4020 3060 4210 3060
+Wire Wire Line
+	4210 3060 4210 2860
+$Comp
+L Device:R R5
+U 1 1 60B7C22C
+P 3290 2860
+F 0 "R5" V 3210 2810 50  0000 L CNN
+F 1 "100" V 3360 2815 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3220 2860 50  0001 C CNN
+F 3 "~" H 3290 2860 50  0001 C CNN
+	1    3290 2860
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 60B7C54A
+P 3280 3060
+F 0 "R3" V 3200 3010 50  0000 L CNN
+F 1 "100" V 3350 3015 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3210 3060 50  0001 C CNN
+F 3 "~" H 3280 3060 50  0001 C CNN
+	1    3280 3060
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3430 3060 3520 3060
+Wire Wire Line
+	3440 2660 3520 2660
+$Comp
+L AirBot-rescue:ASMB-TTB0-0A3A2-dk_LED-Indication-Discrete D1
+U 1 1 60B64C6B
+P 3820 2660
+F 0 "D1" H 3770 2841 60  0000 C CNN
+F 1 "ASMB-TTB0-0A3A2" H 3820 2110 60  0001 C CNN
+F 2 "digikey-footprints:6-PLCC_3.5x3.5mm" H 4020 2860 60  0001 L CNN
+F 3 "https://docs.broadcom.com/docs/AV02-4415EN" H 4020 2960 60  0001 L CNN
+F 4 "516-3281-1-ND" H 4020 3060 60  0001 L CNN "Digi-Key_PN"
+F 5 "ASMB-TTB0-0A3A2" H 4020 3160 60  0001 L CNN "MPN"
+F 6 "Optoelectronics" H 4020 3260 60  0001 L CNN "Category"
+F 7 "LED Indication - Discrete" H 4020 3360 60  0001 L CNN "Family"
+F 8 "https://docs.broadcom.com/docs/AV02-4415EN" H 4020 3460 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/broadcom-limited/ASMB-TTB0-0A3A2/516-3281-1-ND/5695368" H 4020 3560 60  0001 L CNN "DK_Detail_Page"
+F 10 "LED RGB DIFFUSED 6PLCC SMD" H 4020 3660 60  0001 L CNN "Description"
+F 11 "Broadcom Limited" H 4020 3760 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 4020 3860 60  0001 L CNN "Status"
+	1    3820 2660
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3440 2860 3520 2860
+Wire Wire Line
+	2840 3660 2670 3660
+Wire Wire Line
+	2670 3060 3130 3060
+Wire Wire Line
+	2670 2910 3140 2910
+Wire Wire Line
+	3140 2910 3140 2860
+Wire Wire Line
+	2670 2760 3140 2760
+Wire Wire Line
+	3140 2760 3140 2660
+Text Label 6360 1420 2    50   ~ 0
+3,3V
+Text Label 6380 3160 2    50   ~ 0
+3,3V
+$Comp
+L Airbot:SRF02 U4
+U 1 1 60B6DF6E
+P 7050 5180
+F 0 "U4" H 7478 5226 50  0000 L CNN
+F 1 "SRF02" H 7478 5135 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 7050 5180 50  0001 C CNN
+F 3 "" H 7050 5180 50  0001 C CNN
+	1    7050 5180
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 60B6DF78
+P 6400 5480
+F 0 "#PWR07" H 6400 5230 50  0001 C CNN
+F 1 "GND" V 6405 5352 50  0000 R CNN
+F 2 "" H 6400 5480 50  0001 C CNN
+F 3 "" H 6400 5480 50  0001 C CNN
+	1    6400 5480
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6550 5480 6400 5480
+Text Label 6310 5030 2    50   ~ 0
+SDA
+Text Label 6310 5180 2    50   ~ 0
+SCL
+Wire Wire Line
+	6310 5030 6550 5030
+Wire Wire Line
+	6550 5180 6310 5180
+Text Label 6390 4880 2    50   ~ 0
+3,3V
+Wire Wire Line
+	960  1450 960  1840
+Connection ~ 960  1840
+Wire Wire Line
+	960  1840 1210 1840
+Wire Wire Line
+	6380 3160 6540 3160
+Wire Wire Line
+	6390 4880 6550 4880
+$EndSCHEMATC
